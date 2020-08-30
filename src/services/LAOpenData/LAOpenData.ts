@@ -13,7 +13,6 @@ class LAOpenData extends httpClient {
   }
 
   async getData() {
-    return require('./business-list.json')
     return this.client.get<Business[]>('/')
   }
 }

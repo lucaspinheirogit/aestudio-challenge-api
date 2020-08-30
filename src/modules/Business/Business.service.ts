@@ -24,7 +24,7 @@ class BusinessService {
   public async findOneWithMostLocations() {
     const businesses = await LAOpenDataService.getData()
 
-    let locationsFrequencyByName = new Map()
+    const locationsFrequencyByName = new Map()
     let maxFrequency = 0
     let result
 
