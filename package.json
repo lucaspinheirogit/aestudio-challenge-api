@@ -16,6 +16,7 @@
   "dependencies": {
     "@libstack/router": "^1.0.0",
     "axios": "^0.20.0",
+    "axios-cache-adapter": "^2.5.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.1.0",

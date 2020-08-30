@@ -18,7 +18,8 @@
     "paths": {
       "@config/*": ["config/*"],
       "@modules/*": ["modules/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"]
     },
     "typeRoots": ["./node_modules/@types", "./src/@types"]
   },

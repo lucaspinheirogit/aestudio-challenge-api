@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios'
+import axios, { AxiosInstance, AxiosAdapter } from 'axios'
 
 import {
   requestInterceptor,
@@ -15,9 +15,10 @@ declare module 'axios' {
 export default class httpClient {
   protected readonly client: AxiosInstance
 
-  constructor(baseURL: string) {
+  constructor(baseURL: string, adapter?: AxiosAdapter) {
     this.client = axios.create({
-      baseURL
+      baseURL,
+      adapter
     })
 
     this.client.interceptors.request.use(requestInterceptor, requestErrorInterceptor)

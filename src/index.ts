@@ -12,4 +12,4 @@ app.use(cors())
 app.use(express.json())
 app.use(controller.router)
 
-app.listen(5000, () => console.log('Server running...'))
+app.listen(5000, () => console.log('Server running, HTTP=5000'))
