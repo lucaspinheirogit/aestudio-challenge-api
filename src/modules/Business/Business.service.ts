@@ -2,13 +2,16 @@ import LAOpenDataService from '@services/LAOpenData'
 import { Pagination } from '@utils/types'
 
 class BusinessService {
-  public async findAll({ page, limit }: Pagination = {}) {
+  public async findAll({ page, limit }: Pagination) {
     const start = page * limit
     const end = page * limit + limit
 
     const businesses = await LAOpenDataService.getData()
 
-    return businesses.slice(start, end)
+    const count = businesses.length
+    const rows = businesses.slice(start, end)
+
+    return { count, rows }
   }
 
   public async findOldest() {
